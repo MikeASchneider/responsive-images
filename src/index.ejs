@@ -4,24 +4,47 @@
 	<meta name="viewport" content="width=device-width">
   <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,300,400,600,700,800" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="css/main.css">
-	<title>Codes &amp; Pictures</title>
+	<title>Mike &amp; Marco's Responsive Image Guide</title>
+  <script src="bower_components/picturefill/dist/picturefill.min.js"></script>
+  <script>
+  document.createElement( 'picture' );
+  </script>
 </head>
 <body>
   <article>
-    <h1>Codes &amp; Pictures</h1>
-    <p>Here are some recommended resources:</p>
-    <ul>
-      <li>
-        <a href="http://responsiveimages.org/">Responsive Images Community Group</a>
-      </li>
-      <li>
-        <a href="https://scottjehl.github.io/picturefill/">Picturefill</a>
-      </li>
-      <li>
-        <a href="https://www.adobe.com/inspire/2013/09/exporting-svg-illustrator.html">Exporting SVG from Illustrator for the Web</a>
-      </li>
-    </ul>
+    <h1>Mike &amp; Marco's Responsive Guide to Responsive Images</h1>
+    <section>
+      <h2>Some recommended resources</h2>
+      <ul>
+        <li>
+          <a href="http://responsiveimages.org/" target="_blank">Responsive Images Community Group</a>
+        </li>
+        <li>
+          <a href="https://scottjehl.github.io/picturefill/" target="_blank">Picturefill</a>
+        </li>
+        <li>
+          <a href="https://www.adobe.com/inspire/2013/09/exporting-svg-illustrator.html" target="_blank">Exporting SVG from Illustrator for the Web</a>
+        </li>
+        <li>
+          <a href="http://www.paintcodeapp.com/news/iphone-6-screens-demystified" target="_blank">iPhone 6 Screens Demystified</a>
+        </li>
+      </ul>
+    </section>
+    <section>
+      <h2>Examples</h2>
+      <h3>img tag</h3>
+      <img class="img-example" src="img/neil.jpg" alt="cat">
+      <h3>Picture</h3>
+      <picture>
+        <source srcset="img/cat.jpg 1x, img/cat@2x.jpg 2x, img/cat@3x.jpg 3x" media="min-width: 0px" />
+        <img src="img/cat.jpg" alt="" />
+      </picture>
+      <h3>SVG (inline)</h3>
+      <% include img/mike.svg %>
+      <h3>SVG (&lt;img&gt; tag)</h3>
+      <img src="img/mike.svg" alt="mike!">
+    </section>
   </article>
-  <script src="bower_components/picturefill/dist/picturefill.min.js"></script>
+  
 </body>
 </html>

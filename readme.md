@@ -8,3 +8,4 @@ Recommendations, resourses, and examples for responsive images from Marco Fesyuk
     $ bower install
     $ npm i -g gulp
     $ gulp
+

@@ -4,24 +4,102 @@
 	<meta name="viewport" content="width=device-width">
   <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,300,400,600,700,800" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="css/main.css">
-	<title>Codes &amp; Pictures</title>
+	<title>Mike &amp; Marco's Responsive Image Guide</title>
+  <script src="bower_components/picturefill/dist/picturefill.min.js"></script>
+  <script>
+  document.createElement( 'picture' );
+  </script>
 </head>
 <body>
   <article>
-    <h1>Codes &amp; Pictures</h1>
-    <p>Here are some recommended resources:</p>
-    <ul>
-      <li>
-        <a href="http://responsiveimages.org/">Responsive Images Community Group</a>
-      </li>
-      <li>
-        <a href="https://scottjehl.github.io/picturefill/">Picturefill</a>
-      </li>
-      <li>
-        <a href="https://www.adobe.com/inspire/2013/09/exporting-svg-illustrator.html">Exporting SVG from Illustrator for the Web</a>
-      </li>
-    </ul>
+    <h1>Mike &amp; Marco's Responsive Guide to Responsive Images</h1>
+    <section>
+      <h2>Some recommended resources</h2>
+      <ul>
+        <li>
+          <a href="http://responsiveimages.org/" target="_blank">Responsive Images Community Group</a>
+        </li>
+        <li>
+          <a href="https://scottjehl.github.io/picturefill/" target="_blank">Picturefill</a>
+        </li>
+        <li>
+          <a href="https://www.adobe.com/inspire/2013/09/exporting-svg-illustrator.html" target="_blank">Exporting SVG from Illustrator for the Web</a>
+        </li>
+        <li>
+          <a href="http://www.paintcodeapp.com/news/iphone-6-screens-demystified" target="_blank">iPhone 6 Screens Demystified</a>
+        </li>
+        <li><a href="img/responsive-images.pdf">Our slide deck!</a></li>
+      </ul>
+    </section>
+    <section>
+      <h2>Examples</h2>
+      <h3>img tag</h3>
+      <img class="img-example" src="img/neil.jpg" alt="cat">
+      <h3>Picture</h3>
+      <picture>
+        <source srcset="img/cat.jpg 1x, img/cat@2x.jpg 2x, img/cat@3x.jpg 3x" media="min-width: 0px" />
+        <img src="img/cat.jpg" alt="" />
+      </picture>
+      <h3>SVG (inline)</h3>
+      <?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 18.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 300 437.7" style="enable-background:new 0 0 300 437.7;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;}
+	.st1{fill:#B4B4B5;}
+	.st2{opacity:0.2;fill:#010101;}
+	.st3{fill:#696A6C;}
+</style>
+<polygon class="st0" points="83,122.6 69,178.6 52,180.6 47,189.6 57,231.6 72,239.6 77,240.6 91,288.6 122,313.6 126,361.6 
+	184,365.6 185,314.6 219,268.6 225,238.6 241,234.6 251,205.6 251,186.6 242,178.6 227,178.6 212,125.6 "/>
+<path class="st1" d="M34,390.6h231c0,0,0.5-68.5-54-73l-35,1v22l-6,9l-10,5l-14,3l-15-5l-8-12v-22H85c0,0-29,9-40,29
+	S34,390.6,34,390.6z"/>
+<path class="st2" d="M136.7,213.9c5-5.1,7.5-16,7.3-20.2l-6-10H96c-4.6,0-9.6,5-11,11c-1,4.4,8.4,21.4,14.7,22
+	C107.6,214.7,119.9,213,136.7,213.9z"/>
+<path class="st2" d="M163.3,213.9c-5-5.1-7.5-16-7.3-20.2l6-10h42c4.6,0,9.6,5,11,11c1,4.4-8.4,21.4-14.7,22
+	C192.4,214.7,180.1,213,163.3,213.9z"/>
+<g>
+	<circle class="st3" cx="121" cy="201.6" r="7"/>
+	<circle class="st3" cx="179" cy="201.6" r="7"/>
+	<path class="st3" d="M136.1,251.6v-3.4c4,3.1,8.8,4.9,14,4.9s10-1.7,14-4.9v3.4c6.1,0,11-4.9,11-11s-4.9-11-11-11v6
+		c2.8,0,5,2.2,5,5c0,1.4-0.6,2.7-1.5,3.6l-4.4-3.5c-3.2,4-7.9,6.4-13.1,6.4s-9.9-2.3-13.1-6.4l-4.4,3.5c-0.9-0.9-1.5-2.2-1.5-3.6
+		c0-2.8,2.2-5,5-5v-6c-6.1,0-11,4.9-11,11S130.1,251.6,136.1,251.6z"/>
+	<path class="st3" d="M207,314.6h-8.4c21.2-13.4,30.4-34.2,30.4-67v-6.1c10.2-0.6,16.1-4.3,18.9-11.9c2.5-6.8,6-26,7.2-35.7
+		c0.8-6.5-1.4-10.4-3.3-12.6c-2.7-3.1-6.9-4.8-11.7-4.8h-6c0.1-5.3,0.5-18,0.9-39c0.5-21.4-5.4-47.7-38.4-60
+		c-22.1-12.8-47.9-16.4-61.6-16v5c-18.2-1.7-39.2,6.2-48,12l6.8,3.4C69.2,95.5,64.6,118.5,65,137.6c0.5,21,0.8,33.7,0.9,39h-5.8
+		c-4.8,0-8.9,1.7-11.7,4.8c-1.9,2.2-4.1,6.1-3.3,12.6c1.1,9.6,4.7,28.9,7.2,35.7c2.8,7.6,8.7,11.3,18.8,11.9v6.1
+		c0,32.8,9.3,53.6,30.4,67H93c-5,0-22.5,1.1-38.1,15.1C39.7,343.3,32,363.8,32,390.6v3h118h118v-3C268,330.5,228.1,314.6,207,314.6z
+		 M229,194.6h4.1c1.7,0,3,1.3,3,3v12h6v-12c0-5-4-9-9-9H229v-6h11.1c3.1,0,5.6,1,7.2,2.8c1.6,1.8,2.2,4.5,1.8,7.9
+		c-1.2,10.2-4.7,28.5-6.8,34.3c-1.4,3.8-4.1,7.3-13.3,7.9V194.6z M77.1,172.9l6.1-33.1c12.4,9.6,32.3,15.9,54.8,15.9
+		c12.8,0,24.8-2,35-5.6v5.6c11.9-2.4,23.8-4.1,38.8-11.4c6.3,10.1,9.7,23.5,11.2,30.9v5.5h-56c-8,0-10.8,5.4-12.3,8.4
+		c-0.3,0.6-0.7,1.3-0.8,1.5c-0.7,0.7-2.7,1.1-3.9,1.1c-1,0-3.1-0.4-3.9-1.1c-0.2-0.2-0.6-1-0.9-1.5c-1.5-2.9-4.3-8.4-12.3-8.4H77.1
+		V172.9z M71.1,188.6h-4c-5,0-9,4-9,9v12h6v-12c0-1.7,1.3-3,3-3h4v40.9c-9.1-0.6-11.8-4.1-13.2-7.9c-2.2-5.9-5.6-24.1-6.8-34.3
+		c-0.4-3.4,0.2-6.1,1.8-7.9c1.6-1.8,4.1-2.8,7.2-2.8h11V188.6z M96.7,279.3c-11.3-16.6-18.5-44.8-19.6-58.5v-34.1H133
+		c4.3,0,5.6,2.5,6.9,5.1c0.6,1.1,1.1,2.2,1.9,3c2.7,2.7,7.2,2.9,8.2,2.9c0.9,0,5.4-0.2,8.1-2.9c0.8-0.8,1.4-1.9,1.9-3
+		c1.3-2.6,2.6-5.1,6.9-5.1h56v31c0,12-7.5,43.6-19.7,61.6c0-7.5-0.8-14.2-4.9-18.5c-2.7-2.8-6.5-4.1-11.3-4.1h-37h-37
+		c-4.9,0-8.7,1.4-11.3,4.1C97.5,265,96.7,271.7,96.7,279.3z M150.1,328.6C150.1,328.6,150.1,328.6,150.1,328.6L150.1,328.6
+		c7.3,0,15.3-1.1,22.9-3.1v13.1c0,8.8-10.3,16-23,16s-23-7.2-23-16v-13.1C134.7,327.5,142.7,328.6,150.1,328.6L150.1,328.6
+		C150,328.6,150,328.6,150.1,328.6z M150,305.6c-15.8,0-29.7-3.5-42-13.9v-18.1c0-4.6,1.9-6.5,6.5-6.5c2.2,0,6.6,1.1,11.3,2.3
+		c7.4,1.9,16.5,4.2,24.2,4.2s16.8-2.3,24.2-4.2c4.7-1.2,9.2-2.3,11.3-2.3c4.6,0,6.5,1.9,6.5,6.5v18.1
+		C179.7,302.2,165.8,305.6,150,305.6z M150,387.6H38c0.5-23.6,7.5-41.6,20.8-53.5c14-12.6,29.7-13.5,34.1-13.5h20
+		c0.6,0.3,1.2,0.5,1.8,0.8c2,0.8,4.1,1.6,6.3,2.3v14.9c0,12.1,13,22,29,22s29-9.9,29-22v-14.9c2.2-0.7,4.3-1.5,6.4-2.4
+		c0.6-0.3,1.2-0.5,1.8-0.8H207c4.5,0,20.1,1,34.1,13.5c13.3,11.9,20.3,29.9,20.8,53.5H150z"/>
+	<path class="st3" d="M150,282.6c-6.3,0-12.7-1.2-19-3.4l-2,5.7c7,2.5,14,3.7,21,3.7l0-0.3l0,0.3c7,0,14-1.3,21-3.7l-2-5.7
+		C162.7,281.5,156.3,282.6,150,282.6z"/>
+	<path class="st3" d="M140.6,164.6c-21.5-2.7-36.6,0.9-45.5,4.4l3.7,9.3c7.8-3.1,21.1-6.3,40.5-3.8L140.6,164.6z"/>
+	<path class="st3" d="M201.2,178.3l3.7-9.3c-8.9-3.5-24-7.2-45.5-4.4l1.3,9.9C180,172,193.4,175.2,201.2,178.3z"/>
+	<rect x="143" y="293.6" class="st3" width="14" height="6"/>
+</g>
+<path class="st3" d="M150,370.6c-21.5,0-39-13.1-39-29.3v-24.7h6v24.7c0,12.9,14.8,23.3,33,23.3s33-10.5,33-23.3v-25.7h6v25.7
+	C189,357.5,171.5,370.6,150,370.6z"/>
+</svg>
+
+      <h3>SVG (&lt;img&gt; tag)</h3>
+      <img src="img/mike.svg" alt="mike!">
+    </section>
   </article>
-  <script src="bower_components/picturefill/dist/picturefill.min.js"></script>
+  
 </body>
 </html>

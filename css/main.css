@@ -14,3 +14,16 @@ h1 {
 article {
   max-width: 1000px;
   margin: auto; }
+
+.img-example {
+  max-width: 90%;
+  margin: auto; }
+
+.big-svg {
+  display: none; }
+
+@media screen and (min-width: 730px) {
+  .big-svg {
+    display: inline-block; }
+  .small-svg {
+    display: none; } }
